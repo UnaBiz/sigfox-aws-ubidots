@@ -3,7 +3,7 @@
 //  Name: sendToUbidots
 //  Runtime: Node.js 6.10
 //  Memory: 512 MB
-//  Timeout: 1 min
+//  Timeout: 5 min
 //  Existing Role: lambda_iot (defined according to ../policy/LambdaExecuteIoTUpdate.json)
 //  Debugging: Enable active tracing
 //  Environment Variables:
