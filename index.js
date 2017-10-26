@@ -8,6 +8,8 @@
 //  Debugging: Enable active tracing
 //  Environment Variables:
 //  NODE_ENV=production
+//  AUTOINSTALL_DEPENDENCY= sigfox-aws-ubidots
+//  AUTOINSTALL_VERSION= >=1.0.1
 //  UBIDOTS_API_KEY=Your Ubidots API key
 //  LAT_FIELDS=deviceLat,geolocLat
 //  LNG_FIELDS=deviceLng,geolocLng
