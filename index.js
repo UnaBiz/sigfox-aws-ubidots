@@ -9,7 +9,7 @@
 //  Environment Variables:
 //  NODE_ENV=production
 //  AUTOINSTALL_DEPENDENCY= sigfox-aws-ubidots
-//  AUTOINSTALL_VERSION= >=0.0.2
+//  AUTOINSTALL_VERSION= >=0.0.3
 //  UBIDOTS_API_KEY=Your Ubidots API key
 //  LAT_FIELDS=deviceLat,geolocLat
 //  LNG_FIELDS=deviceLng,geolocLng

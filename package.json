@@ -28,10 +28,11 @@
   "dependencies": {
     "dnscache": "^1.0.1",
     "dotenv": "^4.0.0",
-    "sigfox-aws": ">=0.0.15",
-    "safe-buffer": "5.0.1",
-    "node-fetch": "^1.6.3",
     "json-stringify-safe": "^5.0.1",
+    "node-fetch": "^1.6.3",
+    "request": "^2.34.0",
+    "safe-buffer": "5.0.1",
+    "sigfox-aws": ">=0.0.15",
     "uuid": "^3.1.0"
   },
   "devDependencies": {
