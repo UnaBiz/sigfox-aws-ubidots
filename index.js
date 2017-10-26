@@ -9,7 +9,7 @@
 //  Environment Variables:
 //  NODE_ENV=production
 //  AUTOINSTALL_DEPENDENCY= sigfox-aws-ubidots
-//  AUTOINSTALL_VERSION= >=1.0.1
+//  AUTOINSTALL_VERSION= >=0.0.2
 //  UBIDOTS_API_KEY=Your Ubidots API key
 //  LAT_FIELDS=deviceLat,geolocLat
 //  LNG_FIELDS=deviceLng,geolocLng
@@ -37,7 +37,7 @@
 //  //////////////////////////////////////////////////////////////////////////////////// endregion
 //  region Portable Declarations for Google Cloud and AWS
 
-const ubidots = require('ubidots');  //  Ubidots API
+const ubidots = require('./lib/ubidots-node');  //  Ubidots API from github.com/UnaBiz/ubidots-node
 
 //  //////////////////////////////////////////////////////////////////////////////////// endregion
 //  region Portable Code for Google Cloud and AWS

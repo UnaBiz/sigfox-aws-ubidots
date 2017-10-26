@@ -32,8 +32,7 @@
     "safe-buffer": "5.0.1",
     "node-fetch": "^1.6.3",
     "json-stringify-safe": "^5.0.1",
-    "uuid": "^3.1.0",
-    "ubidots": "UnaBiz/ubidots-node"
+    "uuid": "^3.1.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
