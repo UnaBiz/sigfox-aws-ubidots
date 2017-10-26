@@ -380,6 +380,15 @@ function wrap() {
     if (body0.duplicate === true || body0.duplicate === 'true') {
       return Promise.resolve(msg);
     }
+    if (body0.baseStationTime) {
+      const baseStationTime = parseInt(body0.baseStationTime, 10);
+      const age = Date.now() - (baseStationTime * 1000);
+      console.log({ baseStationTime });
+      if (age > 5 * 60 * 1000) {
+        //  If older than 5 mins, reject.
+        throw new Error(`too_old: ${age}`);
+      }
+    }
     //  Transform the lat/lng in the message.
     Object.assign(req, { device });
     const body = transformBody(req, body0);
