@@ -1,0 +1,10 @@
+.idea
+**/.env
+**/*-credentials.json
+**/*.bak
+**/yarn.lock
+**/node_modules
+**/database.sqlite
+**/ncp-debug.log
+**/npm-debug.log
+**/*.all.js

@@ -1,0 +1,53 @@
+{
+  "name": "sigfox-aws-ubidots",
+  "version": "0.0.1",
+  "description": "sigfox-aws adapter for integrating Sigfox devices with Ubidots",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "echo TODO",
+    "test": "node test"
+  },
+  "keywords": [
+    "sigfox",
+    "ubidots",
+    "aws",
+    "functions",
+    "lambda",
+    "functions",
+    "iot"
+  ],
+  "author": {
+    "name": "Lee Lup Yuen",
+    "email": "ly.lee@unabiz.com",
+    "url": "http://github.com/unabiz/"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=7.8.0"
+  },
+  "dependencies": {
+    "dnscache": "^1.0.1",
+    "dotenv": "^4.0.0",
+    "sigfox-aws": ">=0.0.15",
+    "safe-buffer": "5.0.1",
+    "node-fetch": "^1.6.3",
+    "json-stringify-safe": "^5.0.1",
+    "uuid": "^3.1.0",
+    "ubidots": "UnaBiz/ubidots-node"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "should": "^11.2.1",
+    "supertest-as-promised": "^4.0.2",
+    "supertest": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UnaBiz/sigfox-aws-ubidots.git"
+  },
+  "bugs": {
+    "url": "https://github.com/UnaBiz/sigfox-aws-ubidots/issues"
+  },
+  "homepage": "https://github.com/UnaBiz/sigfox-aws-ubidots#readme"
+}
