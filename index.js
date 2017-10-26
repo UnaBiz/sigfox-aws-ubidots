@@ -18,7 +18,7 @@
 //  Name: sigfoxSendToUbidots
 //  SQL Version: Beta
 //  Attribute: *
-//  Topic filter: sigfox/devices/all
+//  Topic filter: sigfox/types/sendToUbidots
 //  Condition: (Blank)
 //  Action: Run Lambda Function sendToUbidots
 
