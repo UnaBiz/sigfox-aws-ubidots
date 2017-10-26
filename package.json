@@ -1,6 +1,6 @@
 {
   "name": "sigfox-aws-ubidots",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "sigfox-aws adapter for integrating Sigfox devices with Ubidots",
   "main": "index.js",
   "scripts": {
