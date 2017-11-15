@@ -30,6 +30,8 @@
 //  Begin Common Declarations
 
 /* eslint-disable max-len, camelcase, no-console, no-nested-ternary, import/no-dynamic-require, import/newline-after-import, import/no-unresolved, global-require, max-len */
+process.on('uncaughtException', err => console.error('uncaughtException', err.message, err.stack));  //  Display uncaught exceptions.
+process.on('unhandledRejection', (reason, p) => console.error('Unhandled Rejection at:', p, 'reason:', reason));
 
 //  //////////////////////////////////////////////////////////////////////////////////// endregion
 //  region AWS-Specific Functions
