@@ -29,7 +29,7 @@
 //  //////////////////////////////////////////////////////////////////////////////////////////
 //  Begin Common Declarations
 
-/* eslint-disable max-len, camelcase, no-console, no-nested-ternary, import/no-dynamic-require, import/newline-after-import, import/no-unresolved, global-require, max-len */
+/* eslint-disable arrow-body-style, max-len */
 process.on('uncaughtException', err => console.error('uncaughtException', err.message, err.stack));  //  Display uncaught exceptions.
 process.on('unhandledRejection', (reason, p) => console.error('Unhandled Rejection at:', p, 'reason:', reason));
 
@@ -96,6 +96,7 @@ const expiry = 30 * 1000;  //  Devices expire in 30 seconds, so they will be aut
 function wrap() {
   //  Wrap the module into a function so that all Cloud resources are properly disposed.
   const scloud = require('sigfox-aws'); //  sigfox-aws Framework
+  let wrapCount = 0;
 
   function promisfy(func) {
     //  Convert the callback-style function in func and return as a promise.
@@ -377,7 +378,7 @@ function wrap() {
     //  variables, and populate the values.  All datasources, variables
     //  must be created in advance.  If the device ID exists in multiple
     //  Ubidots accounts, all Ubidots accounts will be updated.
-
+    wrapCount += 1; console.log({ wrapCount }); //
     //  Skip duplicate messages.
     if (body0.duplicate === true || body0.duplicate === 'true') {
       return Promise.resolve(msg);
@@ -457,17 +458,16 @@ function wrap() {
 //  //////////////////////////////////////////////////////////////////////////////////////////
 //  Main Function
 
+const wrapper = wrap();
+
 module.exports = {
   //  Expose these functions to be called by Google Cloud Function.
 
   main: (event) => {
     //  Create a wrapper and serve the PubSub event.
-    let wrapper = wrap();
     return wrapper.serveQueue(event)
-      //  Dispose the wrapper and all resources inside.
-      .then((result) => { wrapper = null; return result; })
       //  Suppress the error or Google Cloud will call the function again.
-      .catch((error) => { wrapper = null; return error; });
+      .catch(error => error);
   },
 
   //  For unit test only.
