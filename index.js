@@ -29,7 +29,7 @@
 //  //////////////////////////////////////////////////////////////////////////////////////////
 //  Begin Common Declarations
 
-/* eslint-disable arrow-body-style, max-len */
+/* eslint-disable arrow-body-style, max-len, global-require */
 process.on('uncaughtException', err => console.error('uncaughtException', err.message, err.stack));  //  Display uncaught exceptions.
 process.on('unhandledRejection', (reason, p) => console.error('Unhandled Rejection at:', p, 'reason:', reason));
 
@@ -39,6 +39,7 @@ process.on('unhandledRejection', (reason, p) => console.error('Unhandled Rejecti
 //  //////////////////////////////////////////////////////////////////////////////////// endregion
 //  region Portable Declarations for Google Cloud and AWS
 
+// eslint-disable-next-line import/no-unresolved
 const ubidots = require('./lib/ubidots-node');  //  Ubidots API from github.com/UnaBiz/ubidots-node
 
 //  //////////////////////////////////////////////////////////////////////////////////// endregion
