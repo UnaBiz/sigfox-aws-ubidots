@@ -32,7 +32,7 @@
     "node-fetch": "^1.6.3",
     "request": "^2.34.0",
     "safe-buffer": "5.0.1",
-    "sigfox-aws": ">=0.0.32",
+    "sigfox-aws": "0.0.34",
     "uuid": "^3.1.0"
   },
   "devDependencies": {
